@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <section id="formulario">
+        <h1>Create Account</h1>
+        <div>
+            <label for="nombre">Nombre</label>
+            <br/>
+            <input type="text" id="nombre" value="" oninput="escribeN();" pattern="[a-z, A-Z]" maxlength="30" required/>
+            <img id="errorNombre" src="images/error-icon.svg">
+            <img id="correctoNombre" src="images/success-icon.svg">
+            <br/>
+            <a id="faltaNombre" style="display:none">Rellene este campo</a>
+            <br/><br/>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <br/>
+            <input type="email" id="email" value="" oninput="escribeE();" maxlength="30" required/> 
+            <img id="errorEmail" src="images/error-icon.svg">
+            <img id="correctoEmail" src="images/success-icon.svg">
+            <br/>
+            <a id="faltaEmail" style="display:none">Rellene este campo</a>
+            <br/><br/>
+        </div>
+        <div>
+            <label for="clave">Clave</label>
+            <br/>
+            <input type="password" id="clave" value="" oninput="escribeC();" maxlength="30" required/>
+            <img id="errorClave" src="images/error-icon.svg">
+            <img id="correctoClave" src="images/success-icon.svg">
+            <br/>
+            <a id="faltaClave" style="display:none">Rellene este campo</a>
+            <br/><br/>
+        </div>
+        <div>
+            <label for="confirmarClave">Confirme su clave</label>
+            <br/>
+            <input type="password" id="confirmarClave" value="" oninput="escribeC2();" maxlength="30" required/>
+            <img id="errorClave2" src="images/error-icon.svg">
+            <img id="correctoClave2" src="images/success-icon.svg">
+            <br/>
+            <a id="faltaClave2" style="display:none">Rellene este campo</a>
+            <br/><br/>
+        </div>
+        <button type="button"onclick="comprobar();">ENVIAR</button>
+        <br/>
+    </section>
+</body>
